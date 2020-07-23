@@ -7,7 +7,6 @@ public class FishingTrigger : MonoBehaviour
      [SerializeField] private GameObject FishingMechn;
 
 
-
 void Start()
     {
      FishingMechn.SetActive(false);
