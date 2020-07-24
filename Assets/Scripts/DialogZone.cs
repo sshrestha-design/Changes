@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogZone : MonoBehaviour {
 	[Header("References")]
 	[SerializeField] private Text dialogueText;
 	[SerializeField] private Text nameText;
+	[SerializeField] private TMP_Text questText;
 	[SerializeField] private GameObject root;
 [SerializeField] private GameObject Hint;
 	[Header("Settings")] [SerializeField] private float letterDelay = 0.1f;
@@ -14,11 +16,13 @@ public class DialogZone : MonoBehaviour {
 	[SerializeField] private float delayAfterSentence = 1f;
 
 	[Header("Content")] [SerializeField] private string[] sentence;
+	[Header("Content")] [SerializeField] private string[] sucessSentence;
 	[SerializeField] private string[] characterName;
 
 	[SerializeField] private KeyCode InputKey;
 
 	[SerializeField] private List<GameObject> DisableOnShow = new List<GameObject>();
+
 
 	private string fullText;
 	private string currentText;
@@ -29,6 +33,7 @@ public class DialogZone : MonoBehaviour {
 
 	private bool inRange;
 	private bool canDisplay = false;
+
 
 	private void Awake()
 	{
@@ -66,6 +71,10 @@ public class DialogZone : MonoBehaviour {
 		//InputHandling
 		if (inRange && SimpleInput.GetButtonDown("Talk"))
 		{
+			if (gameObject.GetComponent<Quest>().gotItem){
+				sentence = sucessSentence;
+				questText.fontStyle = FontStyles.Strikethrough | FontStyles.Bold;
+			}
 			if (!root.gameObject.activeInHierarchy)
 			{
 				ShowDialogue();
@@ -75,6 +84,7 @@ public class DialogZone : MonoBehaviour {
 				HideDialogue();
 				reset();
 			}
+			
 		}
 
 		if (!canDisplay){return;}
