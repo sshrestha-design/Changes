@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/fishingTest.unity
-    guid: 15a49e1f131ad4803b08c5a14a98fd04
-  - enabled: 1
-    path: Assets/Scenes/Scene1_Childhood.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 32987694b1ae9944881cb505e9303003
+  - enabled: 0
+    path: Assets/Scenes/Scene2_Teenage.unity
     guid: cc7a87aa81e8a044289217e3c4d60f13
+  - enabled: 1
+    path: Assets/Scenes/Scene1_Childhood 1.unity
+    guid: 1fa639ea6909bd0459d45ae72b43a938
+  - enabled: 1
+    path: Assets/Scenes/Scene1_Teenage.unity
+    guid: db02ecb0957f7b540adf95d1b05cd3bd
   m_configObjects: {}
