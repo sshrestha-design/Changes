@@ -1962,6 +1962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1674410016}
   nameText: {fileID: 2489749}
+  questText: {fileID: 0}
   root: {fileID: 793939451}
   Hint: {fileID: 1178654939}
   letterDelay: 0.1
@@ -1977,6 +1978,7 @@ MonoBehaviour:
   - 'I should get rid of those traps and get you some food '
   - I can use the fishing rod on the boat to get some fish.
   - 'Just wait a bit little buddy '
+  sucessSentence: []
   characterName:
   - Bear Cub Spotted
   InputKey: 101
@@ -2044,6 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quests: {fileID: 987519842}
+  gotItem: 0
 --- !u!1 &127822964
 GameObject:
   m_ObjectHideFlags: 0
@@ -6388,6 +6391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1887691532}
   nameText: {fileID: 1595056934}
+  questText: {fileID: 0}
   root: {fileID: 1525724286}
   Hint: {fileID: 1178654939}
   letterDelay: 0.1
@@ -6397,6 +6401,7 @@ MonoBehaviour:
   - Wait is that a bucket i see..
   - Hmm..i guess i can use that..
   - But Some people really need to be taught not to litter..Goddamit
+  sucessSentence: []
   characterName:
   - Floating Bucket
   InputKey: 101
@@ -12156,6 +12161,7 @@ MonoBehaviour:
   Hint: {fileID: 529593437}
   Dialoguetips: {fileID: 971181970}
   Achievements: {fileID: 175250354}
+  quest: {fileID: 1199026080}
   objectobtain: 1
   s: 1
 --- !u!61 &805390185
@@ -16201,6 +16207,7 @@ MonoBehaviour:
   Hint: {fileID: 650103568}
   Dialoguetips: {fileID: 1832922417}
   Achievements: {fileID: 8490681086036445624}
+  quest: {fileID: 0}
   objectobtain: 1
   s: 1
 --- !u!61 &1123847023
@@ -17328,6 +17335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1425192407}
   nameText: {fileID: 332537098}
+  questText: {fileID: 667745251}
   root: {fileID: 1311398375}
   Hint: {fileID: 1178654939}
   letterDelay: 0.1
@@ -17342,6 +17350,8 @@ MonoBehaviour:
   - Ever since the factories started showing up around here the water tastes bad.
   - Well it's better than nothing.
   - Don't worry Mr.Plant i will get you the water. I wondt let you Die.
+  sucessSentence:
+  - ' I watered this plant. It makes me happy.'
   characterName:
   - Magic Plant
   InputKey: 101
@@ -17385,6 +17395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quests: {fileID: 617324310}
+  gotItem: 0
 --- !u!1 &1211010631
 GameObject:
   m_ObjectHideFlags: 0
@@ -24882,6 +24893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1852498777}
   nameText: {fileID: 338638818}
+  questText: {fileID: 0}
   root: {fileID: 847799041}
   Hint: {fileID: 1832922417}
   letterDelay: 0.1
@@ -24891,6 +24903,7 @@ MonoBehaviour:
   - Dammit! How can people  be so careless trashing everywhere . i should pick it
     up
   - ...
+  sucessSentence: []
   characterName:
   - Yeeah
   InputKey: 101
