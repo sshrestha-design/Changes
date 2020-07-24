@@ -28,7 +28,7 @@ public class DialogZone : MonoBehaviour {
 	private float timer;
 
 	private bool inRange;
-
+	private bool canDisplay = false;
 
 	private void Awake()
 	{
@@ -54,6 +54,13 @@ public class DialogZone : MonoBehaviour {
 		HideDialogue();
 	}
 
+	private void reset(){
+		canDisplay = false;
+		index = 0;
+		dialogueText.text = "";
+		fullSentenceDisplayed = true;
+	}
+
 	private void Update()
 	{
 		//InputHandling
@@ -62,11 +69,15 @@ public class DialogZone : MonoBehaviour {
 			if (!root.gameObject.activeInHierarchy)
 			{
 				ShowDialogue();
+				canDisplay = true;
 			} else
 			{
 				HideDialogue();
+				reset();
 			}
 		}
+
+		if (!canDisplay){return;}
 
 		//Dialog Display Handling
 		if (index < sentence.Length)
@@ -83,9 +94,14 @@ public class DialogZone : MonoBehaviour {
 					timer -= Time.deltaTime;
 				}
 			}
-		} else if (repeatDialog)
+		} else 
 		{
-			index = 0;
+			if (fullSentenceDisplayed)
+			{
+				if (timer <= 0f)
+				reset();
+			}
+
 		}
 	}
 
@@ -93,12 +109,14 @@ public class DialogZone : MonoBehaviour {
 	{
 		for (int i = 0; i <= fullText.Length; i++)
 		{
+			if(!canDisplay){break;}
 			currentText = fullText.Substring(0, i);
 			TryApplyText();
 			yield return new WaitForSeconds(letterDelay);
 		}
-
-		index++;
+		if(canDisplay){
+			index++;
+		}
 		timer = delayAfterSentence;
 		fullSentenceDisplayed = true;
 	}
@@ -155,6 +173,7 @@ public class DialogZone : MonoBehaviour {
 		{
 			inRange = false;
 			Hint.SetActive(false);
+			reset();
 		}
 
 			HideDialogue();
