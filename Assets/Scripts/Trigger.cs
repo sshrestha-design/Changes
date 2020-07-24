@@ -10,6 +10,8 @@ public class Trigger : MonoBehaviour
 [SerializeField] private GameObject Dialoguetips;
 [SerializeField] private GameObject Achievements;
 
+[SerializeField] private GameObject quest;
+
 public  bool objectobtain=true;
 public float s=1f;
 
@@ -31,6 +33,9 @@ void Start()
          s=1;
 
          Achievement();
+         if (quest != null){
+             quest.gameObject.GetComponent<Quest>().gotItem = true;
+         }
          }
          
       

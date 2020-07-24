@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {[SerializeField] private GameObject Quests;
+
+public bool gotItem = false;
       
     // Start is called before the first frame update
     void Start()
