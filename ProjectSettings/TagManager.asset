@@ -7,6 +7,7 @@ TagManager:
   - Water
   - Bait
   - bait
+  - Trap
   layers:
   - Default
   - TransparentFX

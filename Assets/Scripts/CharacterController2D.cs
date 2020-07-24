@@ -142,17 +142,15 @@ bool boatmodde=false;
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
-
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+	transform.Rotate(0f, 180f, 0f);
+	
 	}
 	private void  OnTriggerStay2D(Collider2D other)
 {
       if(other.gameObject.tag == "Water")
     {
        boatmodde=true;
+
     }
     
 }

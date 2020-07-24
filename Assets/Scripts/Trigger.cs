@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-     [SerializeField] private GameObject Object;
-      [SerializeField] private GameObject trash;
+[SerializeField] private GameObject Object;
+[SerializeField] private GameObject trash;
 [SerializeField] private GameObject Hint;
 [SerializeField] private GameObject Dialoguetips;
 [SerializeField] private GameObject Achievements;
