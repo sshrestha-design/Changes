@@ -71,7 +71,7 @@ public class DialogZone : MonoBehaviour {
 		//InputHandling
 		if (inRange && SimpleInput.GetButtonDown("Talk"))
 		{
-			if (gameObject.GetComponent<Quest>().gotItem){
+			if (gameObject.GetComponent<Quest>() != null && gameObject.GetComponent<Quest>().gotItem){
 				sentence = sucessSentence;
 				questText.fontStyle = FontStyles.Strikethrough | FontStyles.Bold;
 			}
@@ -86,9 +86,7 @@ public class DialogZone : MonoBehaviour {
 			}
 			
 		}
-
 		if (!canDisplay){return;}
-
 		//Dialog Display Handling
 		if (index < sentence.Length)
 		{
